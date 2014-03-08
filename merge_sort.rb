@@ -1,66 +1,32 @@
-# Merge Sort
-#
-# Input: A sequence of numbers in any order
-# Output: An ordered sequence from smallest number to largest
-#
-def merge_sort(numbers)
+def merge_sort(a)
+  return numbers if numbers.length <= 1
 
-  # Empty sets and singletons are already sorted
-  if numbers.length <= 1
-    return numbers
-  end
+  m = a.length / 2
+  p l = a[0...m]
+  p r = a[m..a.length-1]
 
-  # Split array in two
-  middle = numbers.length / 2
-  left = numbers[0...middle]
-  right = numbers[middle..numbers.length-1]
+  p l = merge_sort(l)
+  p r = merge_sort(r)
 
-  puts left.inspect
-  puts right.inspect
-
-  # Recursively call merge_sort to divide
-  # array into continually smaller sets
-  left = merge_sort(left)
-  right = merge_sort(right)
-
-  puts left.inspect
-  puts right.inspect
-
-  # Merge sets
-  merge(left, right)
+  merge(l, r)
 end
 
-def merge(left, right)
-  result = []
-
-  # As long as there are elements to compare
-  while left.length > 0 || right.length > 0
-
-    # If there are elements in both sets to compare
-    if left.length > 0 && right.length > 0
-
-      # Smallest element is added to result
-      if left[0] <= right[0]
-        result << left.shift
-      else
-        result << right.shift
-      end
-
-    # Otherwise, add remaining elements
-    elsif left.length > 0
-      result << left.shift
-    elsif right.length > 0
-      result << right.shift
+def merge(l, r)
+  o = []
+  while l.length > 0 || r.length > 0
+    if l.length > 0 && r.length > 0
+      l[0] <= r[0] ? o << l.shift : o << r.shift
+    elsif l.length > 0
+      o << left.shift
+    elsif r.length > 0
+      o << right.shift
     end
   end
-
-  result
+  o
 end
 
-# Generate array of ten random integers
-unsorted = (0..7).to_a.sort{ rand() - 0.5 }[0..7]
-puts unsorted.inspect
+a = (0..7).to_a.sort{ rand() - 0.5 }[0..7]
+p a
 
-# Sort
-sorted = merge_sort(unsorted)
-puts sorted.inspect
+s = merge_sort(a)
+p s
