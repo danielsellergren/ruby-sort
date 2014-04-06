@@ -1,5 +1,5 @@
 def merge_sort(a)
-  return numbers if numbers.length <= 1
+  return a if a.length <= 1
 
   m = a.length / 2
   p l = a[0...m]
@@ -17,9 +17,9 @@ def merge(l, r)
     if l.length > 0 && r.length > 0
       l[0] <= r[0] ? o << l.shift : o << r.shift
     elsif l.length > 0
-      o << left.shift
+      o << l.shift
     elsif r.length > 0
-      o << right.shift
+      o << r.shift
     end
   end
   o
