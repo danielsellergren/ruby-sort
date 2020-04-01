@@ -17,3 +17,9 @@ Merge Sort is a divide and conquer algorithm for sorting which is generally stab
 Bubble Sort is an extremely simple and generally poor-performing algorithm for sorting which iterates through a list and swaps values that are in the wrong order. This process is repeated until the list is fully sorted. It has a worst-case and average complexity of O(n^2).
 
 [Bubble Sort on Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort)
+
+## Bogosort
+
+Bogosort is an intentionally inefficient algorithm for sorting which randomly shuffles the list until it is correctly sorted. It is not seriously used for any purpose but rather is interesting only in comparison to more efficient algorithms.
+
+[Bogosort on Wikipedia](https://en.wikipedia.org/wiki/Bogosort)
