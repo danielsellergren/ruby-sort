@@ -8,7 +8,7 @@ Insertion Sort is a very simple and common sense approach to the sorting problem
 
 ## Merge Sort
 
-Merge Sort is a divide and conquer algorithm for sorting which is generally stable. Its average and worst case performance is O(n log n), which makes it more efficient than Insertion for most sets.
+Merge Sort is a divide and conquer algorithm for sorting which is generally stable. Its average and worst case performance is `O(n log n)`, which makes it more efficient than Insertion for most sets.
 
 [Merge Sort on Wikipedia](http://en.wikipedia.org/wiki/Merge_sort)
 
@@ -20,6 +20,12 @@ Bubble Sort is an extremely simple and generally poor-performing algorithm for s
 
 ## Bogosort
 
-Bogosort is an intentionally inefficient algorithm for sorting which randomly shuffles the list until it is correctly sorted. It is not seriously used for any purpose but rather is interesting only in comparison to more efficient algorithms.
+Bogosort ("Bogus" + "sort") is an intentionally inefficient algorithm for sorting which randomly shuffles the list until it is correctly sorted. It is not seriously used for any purpose but rather is interesting only in comparison to more efficient algorithms.
 
 [Bogosort on Wikipedia](https://en.wikipedia.org/wiki/Bogosort)
+
+## Stooge Sort
+
+Stooge Sort is another inefficient sorting algorithm which has a time complexity of `O(n^(log 3 / log 1.5))`.
+
+[Stooge Sort on Wikipedia](https://en.wikipedia.org/wiki/Stooge_sort)
