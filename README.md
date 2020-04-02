@@ -37,3 +37,9 @@ Sleep Sort is humorous algorithm allegedly posted anonymously to 4chan. It invol
 * [Sleep Sort: Where Theory Meets Sobering Reality](https://dev.to/sishaarrao/sleep-sort-where-theory-meets-sobering-reality-b3m)
 * [Untangling Ruby Threads](https://thoughtbot.com/blog/untangling-ruby-threads)
 * [What is the Time Complexity of the Sleep Sort?](https://stackoverflow.com/questions/6474318/what-is-the-time-complexity-of-the-sleep-sort)
+
+## Integer Pigeonhole Sort
+
+Integer Pigeonhole Sort is an `O(n)` solution for sorting a list of `n` integers from `0` to `n-1` with no duplicates. For this specific case the order of the original array does not matter and in fact is not even used, but rather a new array is generated with the correct ordering.
+
+* [What is the Strangest Sorting Algorithm?](https://www.quora.com/What-is-the-strangest-sorting-algorithm)
