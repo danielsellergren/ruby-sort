@@ -43,3 +43,9 @@ Sleep Sort is humorous algorithm allegedly posted anonymously to 4chan. It invol
 Integer Pigeonhole Sort is an `O(n)` solution for sorting a list of `n` integers from `0` to `n-1` with no duplicates. For this specific case the order of the original array does not matter and in fact is not even used, but rather a new array is generated with the correct ordering.
 
 * [What is the Strangest Sorting Algorithm?](https://www.quora.com/What-is-the-strangest-sorting-algorithm)
+
+## Slowsort
+
+Slowsort is another unserious sorting algorithm first published in 1986 by Andrei Broder and Jorge Stolfi in their paper _Pessimal Algorithms and Simplexity Analysis_. First it sorts the first half of the array recursively, then the second half of the array recursively, then it places the highest element of the array at the end and recursively sorts the rest of the list.
+
+* [Slowsort on Wikipedia](https://en.wikipedia.org/wiki/Slowsort)
