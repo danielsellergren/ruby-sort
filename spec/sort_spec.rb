@@ -22,7 +22,7 @@ files.each do |file|
 
     # Get the class from our name_class string and call its sort method.
     it 'sorts a given array' do
-      sorted = Kernel.const_get(name_class).send(:sort, @unsorted)
+      sorted = Kernel.const_get(name_class).send(:sort, @unsorted, 0, @unsorted.length-1, false)
       expect(sorted).to eq(@unsorted.sort)
     end
   end

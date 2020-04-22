@@ -1,5 +1,5 @@
 class InsertionSort
-  def self.sort(a, o=false)
+  def self.sort(a, s=false, f=false, o=false)
     for i in 1...a.length
       k = a[i]
       j = i - 1
