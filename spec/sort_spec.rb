@@ -4,8 +4,6 @@
 # creates a spec to test each of them with a randomized array.
 files = Dir.glob('**.rb')
 files.each do |file|
-  next if file.include? 'verbose'
-
   # Use the filename to generate human and class versions for use in spec.
   name_snake = file.chomp('.rb')
   name_human = name_snake.split('_').map(&:capitalize).join(' ')
