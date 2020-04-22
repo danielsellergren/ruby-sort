@@ -1,10 +1,11 @@
+# frozen_string_literal: true
+
 # Stooge Sort
 #
 # Input: A sequence of numbers in any order.
 # Output: An ordered sequence from smallest number to largest.
 #
 def stooge_sort(numbers, start, finish)
-
   # If the first element is larger than the last, swap them.
   if numbers[start] > numbers[finish]
     numbers[start], numbers[finish] = numbers[finish], numbers[start]
@@ -26,9 +27,9 @@ def stooge_sort(numbers, start, finish)
 end
 
 # Generate array of ten random integers.
-unsorted = (0..9).to_a.sort{ rand() - 0.5 }[0..7]
+unsorted = (0..9).to_a.sort { rand - 0.5 }[0..7]
 puts unsorted.inspect
 
 # Sort.
-sorted = stooge_sort(unsorted, 0, unsorted.length-1)
+sorted = stooge_sort(unsorted, 0, unsorted.length - 1)
 puts sorted.inspect

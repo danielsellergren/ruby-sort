@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Sleep Sort
 #
 # Input: A sequence of numbers in any order.
@@ -11,24 +13,22 @@ def sleep_sort(numbers)
   # Inside each thread, sleep for the number of seconds represented by
   # the value of the element. Then add the number to the sorted array.
   numbers.each do |number|
-    threads << Thread.new { 
+    threads << Thread.new do
       sleep(number)
-      sorted << number 
-    }
+      sorted << number
+    end
   end
 
   # Calling `join` means the main thread won't finish until every child
   # thread has finished. Otherwise the program will finish before our
   # threads are done sleeping, and the array won't be sorted.
-  threads.each do |thread|
-    thread.join
-  end
+  threads.each(&:join)
 
   sorted
 end
 
 # Generate array of ten random integers.
-unsorted = (0..9).to_a.sort{ rand() - 0.5 }[0..9]
+unsorted = (0..9).to_a.sort { rand - 0.5 }[0..9]
 puts unsorted.inspect
 
 # Sort.

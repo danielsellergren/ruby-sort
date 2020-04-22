@@ -1,10 +1,11 @@
+# frozen_string_literal: true
+
 # Bogosort in Ruby
 #
 # Input: A sequence of numbers in any order.
 # Output: An ordered sequence from smallest number to largest.
 #
 def bogosort(numbers)
-
   # Keep shuffling the array until it is sorted.
   until sorted?(numbers)
     p numbers
@@ -20,17 +21,15 @@ def sorted?(array)
 
   # Iterates through the array and invalidates that the array is sorted
   # if it finds an instance where elements are out of order.
-  (array.length-1).times do |i|
-    if array[i] > array[i+1]
-      sorted = false
-    end
+  (array.length - 1).times do |i|
+    sorted = false if array[i] > array[i + 1]
   end
 
   sorted
 end
 
 # Generate array of five random integers.
-unsorted = (1..5).to_a.sort{ rand() - 0.5 }[0..9]
+unsorted = (1..5).to_a.sort { rand - 0.5 }[0..9]
 puts unsorted.inspect
 
 # Sort.
